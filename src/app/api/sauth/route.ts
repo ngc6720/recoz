@@ -1,3 +1,4 @@
+import * as CONFIG from "@/app/lib/utils/config";
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -21,9 +22,7 @@ export async function GET(request: NextRequest) {
   const q = new URLSearchParams({
     grant_type: "authorization_code",
     code: code,
-    redirect_uri: `${process.env.HOST}${
-      process.env.PORT !== "443" ? ":" + process.env.PORT : ""
-    }${process.env.SPOTIFY_REDIRECT_URI}`,
+    redirect_uri: CONFIG.url + process.env.SPOTIFY_REDIRECT_URI,
   }).toString();
 
   const authOptions = {

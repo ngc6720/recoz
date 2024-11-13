@@ -1,3 +1,4 @@
+import * as CONFIG from "@/app/lib/utils/config";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
@@ -24,22 +25,21 @@ export async function GET() {
   });
 
   const scope: string = [
-    "streaming",
-    "user-read-email",
-    "user-read-private",
-    "playlist-modify-public",
-    "user-read-playback-state",
-    "user-modify-playback-state",
+    // "streaming",
+    // "user-read-email",
+    // "user-read-private",
+    // "playlist-modify-public",
+    // "user-read-playback-state",
+    // "user-modify-playback-state",
   ].join(" ");
 
   const q = new URLSearchParams({
     client_id: process.env.SPOTIFY_CLIENT_ID ?? "",
     response_type: "code",
-    redirect_uri: `${process.env.HOST}${
-      process.env.PORT !== "443" ? ":" + process.env.PORT : ""
-    }${process.env.SPOTIFY_REDIRECT_URI}`,
+    redirect_uri: CONFIG.url + process.env.SPOTIFY_REDIRECT_URI,
     scope: scope,
     state: state,
   }).toString();
+
   return NextResponse.redirect("https://accounts.spotify.com/authorize?" + q);
 }
