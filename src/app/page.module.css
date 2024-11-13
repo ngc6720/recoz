@@ -43,7 +43,6 @@
 
 .spotify svg {
   height: 1.5rem;
-  width: fit-content;
   fill: var(--foreground);
 }
 
