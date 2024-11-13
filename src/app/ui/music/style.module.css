@@ -1,0 +1,152 @@
+ul.list {
+  display: flex;
+  flex-direction: column;
+  /* position: absolute; */
+  width: 100%;
+}
+
+li.track {
+  list-style-type: none;
+  border-top: 1px solid var(--foreground);
+  margin: 0;
+  position: relative;
+}
+
+li.track > button {
+  --padding: 0.2em;
+  --icon-playstate-width: 2em;
+  font-family: var(--font-geist-mono);
+  font-size: clamp(1rem, 8vw, 6rem);
+  overflow: hidden;
+  transition: font-weight 0.2s ease, color 0.2s ease, letter-spacing 0.2s ease;
+  width: 100%;
+  transform-origin: 0;
+  letter-spacing: 0rem;
+  font-weight: 250;
+  overflow: hidden;
+  padding-top: calc(3.5rem + var(--padding));
+  padding-bottom: calc(1rem + var(--padding));
+  background: var(--background);
+  display: flex;
+  outline: none;
+}
+
+li.track button > span {
+  position: relative;
+  transform: translateX(calc(var(--icon-playstate-width) * -1 + 1rem));
+  background: inherit;
+  padding-left: var(--icon-playstate-width);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+li.track button .artist {
+  font-size: 1rem;
+  width: fit-content;
+  display: flex;
+}
+
+li.track button .title {
+  display: flex;
+}
+
+li.track button.overflown.playing .title span {
+  animation-name: scrollingText;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+li.track button.overflown .title span:nth-child(2) {
+  display: block;
+}
+
+li.track button .title span {
+  display: block;
+  transform-origin: 0;
+  white-space: nowrap;
+  text-overflow: clip;
+  padding-right: var(--icon-playstate-width);
+}
+
+li.track button .title span:nth-child(2) {
+  display: none;
+}
+
+li.track button.playing > span {
+  transform: translateX(0);
+}
+
+li.track button .icon-playstate {
+  stroke: var(--color-accent);
+  width: var(--icon-playstate-width);
+  overflow: hidden;
+  color: var(--foreground);
+  background: inherit;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  font-weight: 400;
+  height: 100%;
+  padding: 1rem;
+}
+
+li.track .buttons,
+li.track .info {
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  width: fit-content;
+}
+
+li.track .info {
+  left: 0;
+  font-weight: 400;
+  letter-spacing: 0rem;
+  color: var(--foreground);
+  pointer-events: none;
+}
+
+li.track .buttons svg {
+  stroke: var(--foreground);
+  fill: none;
+  width: 100%;
+  height: 100%;
+}
+
+li.track .buttons > * {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+li.track > button:focus {
+  background: var(--color-accent-bg);
+}
+
+@media (hover) {
+  li.track > button:hover {
+    background: var(--color-accent-bg);
+    font-weight: 800;
+    color: var(--color-accent);
+  }
+}
+
+@keyframes scrollingText {
+  0% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

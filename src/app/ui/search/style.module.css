@@ -1,0 +1,112 @@
+.label {
+  padding-left: 1rem;
+  font-size: 0.85rem;
+}
+
+.combobox {
+  height: 3rem;
+  width: var(--settings-width);
+  border-style: none;
+  background-color: var(--background);
+
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--foreground);
+  border: 1px solid var(--gray-alpha-200);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.combobox::placeholder {
+  color: var(--color-icon);
+}
+
+.combobox-wrapper {
+  position: relative;
+}
+.combobox-wrapper > svg {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 1.5rem;
+  left: 1rem;
+  pointer-events: none;
+}
+.combobox-cancel {
+  position: absolute;
+  height: 100%;
+  width: 3rem;
+  top: 0;
+  right: 0;
+  padding: 0 0.5rem;
+}
+.combobox-cancel svg {
+  height: 100%;
+  width: 100%;
+}
+
+.combobox[data-focus-visible] {
+  outline-style: solid;
+}
+
+.combobox[data-active-item] {
+  outline-width: 2px;
+}
+
+.popover {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  max-height: min(var(--popover-available-height, 20rem), 20rem);
+  flex-direction: column;
+  overscroll-behavior: contain;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--gray-alpha-200);
+  border-color: var(--color-accent);
+
+  background: var(--background);
+  padding: 0.5rem;
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+.combobox-item {
+  cursor: default;
+  scroll-margin: 0.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.combobox-item:hover {
+  background: var(--gray-alpha-100);
+}
+
+.combobox-item[data-active-item] {
+  color: var(--background);
+  background: var(--color-accent);
+}
+
+.popover {
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: transform 200ms cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 200ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+.popover[data-enter] {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.combobox,
+.popover {
+  border-radius: var(--border-radius-1);
+}
+.combobox-item {
+  border-radius: var(--border-radius-2);
+}

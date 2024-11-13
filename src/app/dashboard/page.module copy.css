@@ -1,0 +1,152 @@
+.main {
+  --margin: 5rem;
+  --settings-width: clamp(
+    20rem,
+    calc((100vw - var(--margin) * 2) / 12 * 3),
+    25rem
+  );
+  display: grid;
+  grid-template-rows: var(--footer-height) 1fr var(--footer-height);
+  /* min-height: calc(100svh - var(--footer-height) * 2); */
+  padding: var(--margin);
+  gap: 4rem;
+  font-family: var(--font-geist-sans);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: 100%;
+}
+
+.user {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.settings {
+  width: var(--settings-width);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: fixed;
+  z-index: 1;
+  user-select: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  flex-direction: column;
+}
+
+.settings svg {
+  stroke: var(--color-icon);
+}
+
+.buttons a svg,
+.buttons button svg {
+  stroke: var(--color-accent);
+}
+
+.buttons a,
+.buttons button {
+  color: var(--color-accent);
+  appearance: none;
+  height: 3rem;
+  padding: 0 1rem;
+  border: none;
+  border: 1px solid transparent;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  width: fit-content;
+  gap: 1rem;
+}
+
+a.primary,
+button.primary {
+  background: var(--foreground);
+  color: var(--background);
+  gap: 0.5rem;
+}
+
+a.secondary,
+button.secondary {
+  border-color: var(--gray-alpha-200);
+  min-width: 12rem;
+}
+
+.music {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: var(--settings-width) 1fr;
+  gap: 2rem;
+  overflow: hidden;
+  height: fit-content;
+}
+
+.music > * {
+  grid-column: 2;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a.primary:hover,
+  button.primary:hover {
+    background: var(--button-primary-hover);
+    border-color: transparent;
+  }
+
+  a.secondary:hover,
+  button.secondary:hover {
+    background: var(--button-bg);
+    border-color: transparent;
+  }
+}
+
+@media (max-width: 1080px) {
+  .main {
+    padding: 2rem;
+    padding-bottom: var(--margin);
+    --settings-width: 100%;
+  }
+  .settings {
+    position: relative;
+    height: fit-content;
+  }
+  .wrapper {
+    align-items: center;
+  }
+
+  .wrapper ol {
+    text-align: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons a,
+  .buttons button {
+    font-size: 0.875rem;
+    padding: 0 0.875rem;
+  }
+
+  a.secondary,
+  button.secondary {
+    min-width: auto;
+  }
+
+  .music > * {
+    grid-column: 1;
+  }
+}

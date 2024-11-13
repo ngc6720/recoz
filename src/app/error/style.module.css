@@ -1,0 +1,48 @@
+.page {
+  --margin: 1rem;
+  padding: var(--margin);
+  font-family: var(--font-geist-sans);
+  min-height: 100vh;
+}
+
+.page main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  max-width: 25rem;
+}
+
+.page main .title {
+  display: flex;
+  flex-wrap: wrap;
+  text-transform: lowercase;
+}
+
+.page main .title span {
+  font-family: var(--font-geist-mono);
+  font-weight: 100;
+  font-size: 8rem;
+  animation: weight infinite alternate-reverse ease;
+  color: var(--color-accent);
+  letter-spacing: 2rem;
+}
+.page main .message {
+  font-size: 1rem;
+}
+
+.page a {
+  text-decoration: underline;
+  width: fit-content;
+}
+@keyframes weight {
+  0% {
+    font-weight: 100;
+  }
+  100% {
+    font-weight: 900;
+  }
+}
+
+@media screen {
+}
