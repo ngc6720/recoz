@@ -47,7 +47,7 @@ export default function RootLayout({
                   Website
                 </a>
                 <a
-                  href="https://twitter.com/fr666666666"
+                  href="https://twitter.com/francoiskerforn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
