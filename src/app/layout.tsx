@@ -8,6 +8,8 @@ import { PlaylistProvider } from "./lib/contexts/playlistContext";
 import { NotificationProvider } from "./ui/notification/NotificationContext";
 import Notification from "./ui/notification/Notification";
 
+import Link from "next/link";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -38,27 +40,30 @@ export default function RootLayout({
               <Notification />
               {children}
               <footer className={styles.footer}>
-                <p>@fk</p>
-                <a
+                {/* <p>@fk</p> */}
+                {/* <a
                   href="https://francoiskerforn.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Website
-                </a>
-                <a
-                  href="https://twitter.com/francoiskerforn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Twitter
-                </a>
-                <a
+                </a> */}
+
+                {/* <a
                   href="https://www.linkedin.com/in/fkerforn/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Linkedin
+                </a> */}
+                <Link href="/">Home</Link>
+                <Link href="/legal">Legal</Link>
+                <a
+                  href="https://twitter.com/francoiskerforn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @fkml
                 </a>
               </footer>
             </body>
