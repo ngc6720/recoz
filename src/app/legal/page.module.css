@@ -3,7 +3,7 @@ main.legal {
   padding: var(--margin);
   min-height: calc(100svh - var(--footer-height) * 2);
   font-family: var(--font-geist-sans);
-  max-width: 44rem;
+  max-width: 50rem;
 }
 
 .legal h2 {
@@ -17,22 +17,26 @@ main.legal {
 }
 
 .legal h4 {
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .legal li {
   list-style-type: none;
-  display: grid;
-  grid-template-columns: 1rem 1fr;
-  gap: 0.5rem;
+  /* display: grid; */
+  /* grid-template-columns: 1rem 1fr; */
+  /* gap: 0.5rem; */
+  margin-left: 1rem;
+  position: relative;
 }
 
 .legal li::before {
   content: "";
-  position: relative;
+  position: absolute;
   width: 8px;
-  height: 2px;
-  top: calc(0.5em + 1px);
+  height: 1px;
+  top: 0.6em;
+  left: -1rem;
   background: currentColor;
 }
 
@@ -47,7 +51,8 @@ main.legal {
 p.date {
   position: relative;
   width: fit-content;
-  box-shadow: -0px +6px var(--color-accent);
+  box-shadow: 0px 6px var(--color-accent);
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 1080px) {

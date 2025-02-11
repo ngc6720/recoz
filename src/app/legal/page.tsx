@@ -16,14 +16,14 @@ export default async function EndUserAgreement() {
           <strong>End User Agreement</strong>
         </h3>
         <p className={styles.date}>
-          <strong>Last Updated: 10/02/2025</strong>
+          <strong>Last Updated: 11/02/2025</strong>
         </p>
         <p>
           This End User Agreement ("Agreement") governs your use of Recoz ("the
           App"), a web-based application that provides music recommendations
-          based on artist or track input using the Spotify API. By accessing or
-          using the App, you agree to be bound by this Agreement. If you do not
-          agree to these terms, please do not use the App.
+          based on user input using the Spotify API. By accessing or using the
+          App, you agree to be bound by this Agreement. If you do not agree to
+          these terms, please do not use the App.
         </p>
         ​
         <h4>
@@ -33,13 +33,20 @@ export default async function EndUserAgreement() {
           <li>
             <p>
               The App is designed to provide music recommendations based on user
-              input (artist or track) using the Spotify API.
+              input using the Spotify API.
             </p>
           </li>
           <li>
             <p>
-              The App is accessible only through a web browser and does not
-              require user accounts or store any personal data.
+              To use the App, you must log in to your Spotify account through
+              Spotify's authentication system. The App does not handle or store
+              your Spotify login credentials.
+            </p>
+          </li>
+          <li>
+            <p>
+              The App does not create or manage user accounts and does not store
+              any personal data.
             </p>
           </li>
           <li>
@@ -82,10 +89,12 @@ export default async function EndUserAgreement() {
         </h4>
         <ul>
           <li>
-            All content provided through the Spotify API, including music,
-            artist names, and album art, is owned by Spotify and/or its
-            licensors. You may not reproduce, distribute, or use such content
-            outside of the App without proper authorization from Spotify.
+            <p>
+              All content provided through the Spotify API, including music,
+              artist names, and album art, is owned by Spotify and/or its
+              licensors. You may not reproduce, distribute, or use such content
+              outside of the App without proper authorization from Spotify.
+            </p>
           </li>
         </ul>
         ​
@@ -114,9 +123,11 @@ export default async function EndUserAgreement() {
         </h4>
         <ul>
           <li>
-            To the fullest extent permitted by law, the Recoz team shall not be
-            liable for any indirect, incidental, special, or consequential
-            damages arising out of or in connection with your use of the App.
+            <p>
+              To the fullest extent permitted by law, the Recoz team shall not
+              be liable for any indirect, incidental, special, or consequential
+              damages arising out of or in connection with your use of the App.
+            </p>
           </li>
         </ul>
         ​
@@ -125,10 +136,12 @@ export default async function EndUserAgreement() {
         </h4>
         <ul>
           <li>
-            We reserve the right to modify this Agreement at any time. Any
-            changes will be effective immediately upon posting the updated
-            Agreement on the App. Your continued use of the App after such
-            changes constitutes your acceptance of the revised Agreement.
+            <p>
+              We reserve the right to modify this Agreement at any time. Any
+              changes will be effective immediately upon posting the updated
+              Agreement on the App. Your continued use of the App after such
+              changes constitutes your acceptance of the revised Agreement.
+            </p>
           </li>
         </ul>
         ​
@@ -164,7 +177,7 @@ export default async function EndUserAgreement() {
           <strong>Privacy Policy</strong>
         </h3>
         <p className={styles.date}>
-          <strong>Last Updated: 10/02/2025</strong>
+          <strong>Last Updated: 11/02/2025</strong>
         </p>
         <p>
           This Privacy Policy explains how Recoz ("the App") handles information
@@ -181,14 +194,21 @@ export default async function EndUserAgreement() {
           <li>
             <p>
               The App does not require user accounts, logins, or any form of
-              registration.
+              registration on our side.
+            </p>
+          </li>
+          <li>
+            <p>
+              When you log in to Spotify to use the App, your Spotify
+              credentials are handled directly by Spotify. We do not collect,
+              store, or have access to your Spotify login information.
             </p>
           </li>
           <li>
             <p>
               The App does not collect, store, or retain any personal data,
-              including but not limited to names, email addresses, or IP
-              addresses.
+              including but not limited to names, email addresses, IP addresses,
+              or browsing history.
             </p>
           </li>
         </ul>
@@ -200,8 +220,15 @@ export default async function EndUserAgreement() {
           <li>
             <p>
               The App uses the Spotify API to retrieve music recommendations
-              based on your input (artist or track). The App does not store or
-              cache any data obtained from the Spotify API.
+              based on your input. To access the Spotify API, you must log in to
+              your Spotify account through Spotify's authentication system.
+            </p>
+          </li>
+          <li>
+            <p>
+              The App does not store or cache any data obtained from the Spotify
+              API, including but not limited to track information, artist
+              information, or user data.
             </p>
           </li>
           <li>
@@ -242,9 +269,11 @@ export default async function EndUserAgreement() {
         </h4>
         <ul>
           <li>
-            The App may include links to third-party websites or services, such
-            as Spotify. We are not responsible for the privacy practices or
-            content of these third-party sites.
+            <p>
+              The App may include links to third-party websites or services,
+              such as Spotify. We are not responsible for the privacy practices
+              or content of these third-party sites.
+            </p>
           </li>
         </ul>
         ​
@@ -253,10 +282,12 @@ export default async function EndUserAgreement() {
         </h4>
         <ul>
           <li>
-            We may update this Privacy Policy from time to time. Any changes
-            will be effective immediately upon posting the updated Privacy
-            Policy on the App. Your continued use of the App after such changes
-            constitutes your acceptance of the revised Privacy Policy.
+            <p>
+              We may update this Privacy Policy from time to time. Any changes
+              will be effective immediately upon posting the updated Privacy
+              Policy on the App. Your continued use of the App after such
+              changes constitutes your acceptance of the revised Privacy Policy.
+            </p>
           </li>
         </ul>
         ​
@@ -265,8 +296,10 @@ export default async function EndUserAgreement() {
         </h4>
         <ul>
           <li>
-            If you have any questions about this Privacy Policy, please contact
-            us at fk.contactme@gmail.com.
+            <p>
+              If you have any questions about this Privacy Policy, please
+              contact us at fk.contactme@gmail.com.
+            </p>
           </li>
         </ul>
       </main>
